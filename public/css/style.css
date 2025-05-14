@@ -1,0 +1,148 @@
+.bg1{
+    background-image: url(D:\Obs\img\a1.jpeg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.body{
+    background-image: url('../img/pic5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.card {
+    max-width: 400px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #444;
+}
+body
+{
+  background-image: url(D:\Obs\img\a1.jpeg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+#bg{
+  background-image: url(D:\Obs\img\c1.jpg);
+}
+.bg {
+    background-image: url(../img/l1.jpg);
+    height: 30%;
+    text-align: center;
+  
+  }
+
+
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  .range-container {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .slider {
+    position: relative;
+    width: 70%;
+    height: 6px;
+    background: lightgray;
+    border-radius: 5px;
+  }
+
+  .slider-track {
+    position: absolute;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    top: 0;
+  }
+
+  input[type="range"] {
+    width: 70%;
+    height: 6px;
+    margin: 0;
+    -webkit-appearance: none;
+    background: none;
+    pointer-events: none;
+    position: relative;
+    left: -5px;
+    top: -10px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: orange;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+
+  }
+
+  .price-labels {
+    display: flex;
+
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
