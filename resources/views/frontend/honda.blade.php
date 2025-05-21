@@ -397,15 +397,18 @@
       </div>
       <div class="col-lg-9">
         <div class="row">
+          @foreach ($data as $item)
+              
           <div class="col-md-4">
             <div class="card">
-              <img src="../img/honda/b1.jpg"  class="card-img-top p-5">
+              <img src="../upload/{{$item->image}}"  class="card-img-top p-5">
               <div class="card-body">
-                <p class="card-title">Right 7/8" 22mm Clutch Brake Lever Perch for Honda CR XL XR CRF 
-                  Dirt Bike</p>
+                <p class="card-title">{{$item->title}}</p>
+                <p style="color: red; margin-right: 70%;">RS {{$item->price}}</p>
+                <button type="button" class="btn btn-primary">
+                <a href="{{route('backend.hondadetail' , $item->id )}}" class="text-white text-decoration-none">View Details</a>  
+                </button>
 
-                
-                <p style="color: red; margin-right: 70%;">RS 800.00</p>
                 <h4 style="margin-left: 80%; margin-top: 20px;"><i class="fa-solid fa-cart-shopping"></i></h4>
 
                 <div style="color: grey;font-size: x-small; margin-right: 60%;">
@@ -418,7 +421,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+                    @endforeach
+
+          {{-- <div class="col-md-4">
             <div class="card">
               <img src="../img/honda/b3.jpg" class="card-img-top p-5">
               <div class="card-body">
@@ -562,7 +567,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

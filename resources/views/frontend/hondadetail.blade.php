@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -550,4 +550,48 @@
 
 </body>
 
-</html>
+</html> --}}
+@extends('frontend.layout.main') <!-- Or your layout file -->
+
+@section('content')
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{ asset('upload/' . $item->image) }}" alt="{{ $item->title }}" class="img-fluid border rounded">
+    </div>
+    <div class="col-md-6">
+      <h2>{{ $item->title }}</h2>
+      <h4 class="text-danger">RS {{ $item->price }}</h4>
+      <p class="mt-3">
+        <strong>Description:</strong><br>
+        {{ $item->description ?? 'No description available.' }}
+      </p>
+      <div class="mt-4">
+        <form action="{{route('backend.addtocart.store')}}" method="POST" enctype="multipart/form-data">
+          @csrf
+          <input type="hidden" name="quantity" value="1">
+          <input type="hidden" name="image" value="{{ $item->image }}">
+          <input type="hidden" name="title" value="{{ $item->title }}">
+          <input type="hidden" name="description" value="{{ $item->description }}">
+          <input type="hidden" name="price" value="{{ $item->price }}">
+         
+          <button type="submit" class="btn btn-success mb-2">
+            <i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+          </button>
+          
+        </form>
+        <a href="{{ url()->previous() }}" class="btn btn-secondary ml-2">Back</a>
+      </div>
+
+      <div class="mt-3" style="color: grey;font-size: medium;">
+        <span>Rating:</span><br>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
